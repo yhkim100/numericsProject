@@ -1,0 +1,13 @@
+define (f x y) = (+ (* 2 x) y)
+define (g x) = x
+
+
+mcint f 10 -1 1 4 5
+mcint f 100 -1 1 4 5
+mcint f 1000 -1 1 4 5
+mcint f 10000 -1 1 4 5
+
+numint f 1 -1 1 4 5
+numint f 0.1 -1 1 4 5
+numint f 0.01 -1 1 4 5
+numint f 0.001 -1 1 4 5

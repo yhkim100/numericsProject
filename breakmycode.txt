@@ -1,0 +1,42 @@
+define (f . / ^) = (/ . .05)
+evaluate (f .05 10 20)
+define (g -_- & ||) = (* (- -10 -_-) (/ & ||))
+evaluate (g -10 10 10)
+define (h a b c) = (pow (* a 0.5f) (- b c))
+evaluate (h 1 2 3)
+define (x q r s) = (+ (+ q 0) (- r s))
+evaluate (x 3 2 1)
+evaluate (x 3 4 0.5f)
+define (q & || *) = (* (+ & ||) (- ... 0))
+define (y x y z) = (pow (+ y z) (sqrt x))
+evaluate (y 4 2 0)
+define (z) = (1)
+evaluate (z)
+evaluate (z 1 2 3)
+define (a exp) = (exp)
+evaluate (a 7)
+define (b -) = (-)
+evaluate (b 12)
+define (c d e) = (+ (- d 1) (e))
+evaluate (c 5 4)
+define (d) = (a)
+define (d) = (and)
+define (e) = (z)
+evaluate (e)
+define (n) = (a b)
+
+define(givenExample x y) = (+ (* 2 x) y)
+
+numint givenExample 0.001 -1 1 4 5
+numint givenExample 0.01 -1 1 4 5
+numint givenExample 0.1 -1 1 4 5
+
+
+mcint givenExample 10 -1 1 4 5
+mcint givenExample 100 -1 1 4 5
+mcint givenExample 1000 -1 1 4 5
+mcint givenExample 10000 -1 1 4 5
+
+
+define(fifthOrder) a b c d e = (+ a (+ b (+ c (+ d e) ) ) )  
+numint fifthOrder 0.1 0 1 0 2 0 3 0 4 0 5 

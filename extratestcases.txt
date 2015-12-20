@@ -1,0 +1,13 @@
+ define  (f a y x) = (+ (* 3 y) (- 4 x))
+ define (g +_+ -_- &^%) = (pow (sqrt -_-) (+ +_+ &^%))
+ define (young * & ^) = (- (+ ^ 7) (/ & ^))
+ define (peter a b c) = (* -3.2 a)
+ define (ruth y z) = (pow y z)
+ define (jon . * p) = (* (- .1 p) (+ . *))
+ evaluate (ruth 2 (peter -1.25 20 30))
+ evaluate (DNE 1 2 3)
+ evaluate (f 1 2 3)
+ evaluate (young 0.5 -3 10)
+ evaluate (peter 100 200 300)
+ evaluate (jon 5 (peter (ruth 10 2) 200 300) (young 0.5 -3 10))
+

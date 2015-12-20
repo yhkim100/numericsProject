@@ -1,0 +1,6 @@
+define (f x y z) = (+ (* x y) (- z 321535))
+      evaluate (f 3 4.2 5)
+  define  (otherfunction abc de) = (+ adc de)
+NOT A FUNCTION
+jfklsgjdefine (NOT CORRECT) = (NOT A FUNCTION)
+define(space is off)) = ( )

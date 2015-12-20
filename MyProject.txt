@@ -1,0 +1,109 @@
+Young-hoon Kim
+ECE 551 Final Numerics Project
+
+
+Accomplished
+Step 1: FINISHED
+Step 2: FINISHED
+Step 3: FINISHED
+Step 4: FINISHED, with identified possible bugs
+
+
+SPECIAL TEST CASE NOTES:
+****************
+Part1Test.txt
+****************
+====================================================
+define (g a) = (pow a 2)
+define (test x y) = (/ (+ (- (sqrt (g x)) x) y) y)
+evaluate (test 4 5)
+evaluate (test 100 50)
+====================================================
+If you do this by hand, test function will evaluate to 1 for all values, (X and Y cancel each other out)
+This test case shows that constant values can be used in defining a function.
+This test case also incorporates all possible operators and also shows that constant values can be used in function.
+It is also possible to use predefined function as well as recursively evaluate functions.
+
+More general test cases such as parenthesis mismatch, variable mismatch, function not found, invalid operator, invalid ID, and trying to evaluate with non-numbers is also incorporated.  
+
+
+Sqrt of Negative numbers and Division by Zero are both properly handled. 
+===================================================
+define (SQRTROOT_OF_X x) = (sqrt x)
+evaluate (SQRTROOT_OF_X 25)
+evaluate (SQRTROOT_OF_X -25)
+
+define (DIVISION a b) = (/ a b)
+evaluate (g 10 2)
+evaluate (g 10 0)
+===================================================
+
+
+****************
+Part2Test.txt
+****************
+
+Contains Test Cases for Integration.
+
+Integration relies on the Evaluate algorithm in Part 1. Thus the corner cases found in Part 1 is able to be handled for Part2 numeric integration. 
+
+Function can handle integration in N-dimmensions as well as integration of constants. 
+
+
+****************
+Part3Test.txt
+****************
+
+Contains Test Cases for MonteCarlo Integration
+
+MonteCarlo integration get more accurate with the number of trials.  
+
+MonteCarlo is also able to approximate the integral of N-dimmension functions.
+
+Noticed a Bug where if the more bounds of variables exceed the number of variables, the MCInt will still attempt to integrate with the given bounds. 
+
+****************
+Part4Test.txt
+****************
+
+Contains Test Cases for Gradient Ascension and Descension 
+Further Testing should have been done. 
+
+ADDITIONAL NOTES:
+
+Spacing is VERY important for correct functionality. See project README that was provided by Drew.  
+
+My numerics program is able to read in multiple files at once. It uses a map to store all defined function and will not delete this map until all files have been read. 
+Therefore, it is possible to define functions in the 1st txt file, evaluate the functions in the 2nd txt file, integrate numerically and with MonteCarlo with the 3rd txt file, 
+and finally do gradient ascent or descent in the 4rd txt file.
+ie: ./numerics Part1Test.txt Part2Test.txt Part3Test.txt Part3Test.txt 
+
+Or you can just put everything in one massive test file and run it. That works too.
+
+REMEMBER THAT THE MAP IS SHARED BETWEEN ALL FILES READ BY CHOICE, MAKE SURE ALL UNIQUE FUNCTION ARE TRULY UNIQUE
+
+++++++++++++++++++++++++++++++++++++++
+**Not a bug but a design feature**
+It is possible to use symbols (including operator signs) as variables, as long as it is in correct format and the variables match up with one another 
+ie: It is possible to define a function f(+,-) = (+ + -) and evaluate f(5,6) = (5 + 6) = 11
+
+It is also possible to define a constant function with or without parenthesis. This was intentionally designed for ease of use.
+The following functions are VALID
+define (CONST x) = 5
+define (CONST2 x) = (5)
+define (CONST_VAR const) = const
+define (CONST_VAR2 const) = (const)
+++++++++++++++++++++++++++++++++++++++
+
+
+Possible Bugs:
+
+More testing should have been done on the gradient portion of the program. Functions with infinite maximum values generally return a very large number, and minimum of zero return 0. 
+However some functions take a lot longer to converge than others. All values are parsed correctly, but unsure if distance formula algorithm used is completely accurate.
+
+ie: define (broken x) = (sqrt x)
+min broken 0.1 0.05 10 
+max broken 0.1 0.05 10
+see gradientTests.txt
+
+

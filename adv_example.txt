@@ -1,0 +1,14 @@
+define (g a b) = (+ a b)
+define (f x y z) = (+ (* x (g x y)) (- z 3))
+define (f x y z) = (+ 1 (+ 1 1))
+evaluate (f 3 4.2 5)
+evaluate (f -1 9.2 6)
+evaluate (f 10 (g (g 1 2) 2 ) )
+evaluate (f (g (g 1 2) (f 1 2 3)) 4 5)
+
+
+
+define (q a b) = (+ a b)
+define (x) = (q 1)
+
+define (nomatch a b d) = (+ (+ nothere b) d)
